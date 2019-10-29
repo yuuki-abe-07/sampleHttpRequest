@@ -1,7 +1,7 @@
-pipeline:
-  # ステップは上から順に実行されます（順序付きmap）。
-  test:
-    # Dockerコンテナ起動時のエントリポイントとしてコマンドが実行されます。
-    # 各コマンドは同じシェルで実行されます。
-    commands:
-      - docker build --no-cache -t test:1.0.0
+kind: pipeline
+name: default
+
+steps:
+- name: spec
+  commands:
+    - docker build --no-cache -t test:1.0.0 .
