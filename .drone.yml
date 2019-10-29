@@ -1,10 +1,9 @@
-kind: pipeline
 name: default
+
+kind: pipeline
+type: docker
 
 steps:
 - name: spec
   commands:
     - docker build --no-cache -t test:1.0.0 .
-  when:
-    branch:
-    - master
