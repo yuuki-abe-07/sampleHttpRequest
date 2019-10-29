@@ -1,7 +1,7 @@
 const request = require('superagent')
 const API_BASEURL = 'http://localhost:7071/api/MyHttpTrigger'
 const main = async () => {
-  const i =0
+  const i =1
   const createData = async () => {
     const data = {name: 'abe'}
     return data
